@@ -1,6 +1,6 @@
 >
 # 원래 사용하던 github 계정의 2FA 보조인증키가 맥북 발열로 인해 부팅이 안되던 탓에 초기화하면서 사라져 새로 만든 임시 레포지토리로 공유드립니다.
-![본 계정 커밋내역.png](./https://github.com/minsu-j0/todo-management/blob/master/documents/본 계정 커밋내역.png?raw=true)
+![본 계정 커밋내역.png](https://github.com/minsu-j0/todo-management/blob/main/images/%EB%B3%B8%20%EA%B3%84%EC%A0%95%20%EC%BB%A4%EB%B0%8B%EB%82%B4%EC%97%AD.png?raw=true)
 ### ✔️ Checklist
 
 > ⭕️ : 완료

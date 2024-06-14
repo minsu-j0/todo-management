@@ -1,7 +1,7 @@
 # Schema
 
 > 
-![DB Schema.png](./DB Schema.png)
+![DB Schema.png](images/DB%20Schema.png)
 
 ### 설명
 - todo
