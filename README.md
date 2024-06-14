@@ -13,31 +13,41 @@
 > 
 ##### **Required**
 
-| 완수 여부 | 내용       | 설명 |
-|:-----:|:---------|:---|
-|  ⭕️   | 기능 명세 추출 |    |
-|  ⭕️   | 스키마 설계   |    |
-|  ⭕️   | 기술스텍 설정  |    |
-|  ⭕️   | 아키텍처 구성  |    |
-|  ⭕️   | 기능 개발    |    |
+| 완수 여부 | 내용       | 설명                                                                                                     |
+|:-----:|:---------|:-------------------------------------------------------------------------------------------------------|
+|  ⭕️   | 기능 명세 추출 | [이동](https://github.com/minsu-j0/todo-management/blob/main/%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8.md) |
+|  ⭕️   | 스키마 설계   | [이동](https://github.com/minsu-j0/todo-management/blob/main/Schema.md)                                  |
+|  ⭕️   | 기술스텍 설정  | [이동](https://github.com/minsu-j0/todo-management/blob/main/%EC%82%AC%EC%9A%A9%20%EA%B8%B0%EC%88%A0.md) |
+|  ⭕️   | 아키텍처 구성  | [이동](https://github.com/minsu-j0/todo-management/blob/main/images/Layer%20Flow.png)                    |
+|  ⭕️   | 기능 개발    | [이동](https://github.com/minsu-j0/todo-management/tree/main/src)                                        |
 
 
 ##### **Optional**
 
-| 완수 여부 | 내용                                          | 설명       |
-|:-----:|:--------------------------------------------|:---------|
-|  ⭕️   | 간단한 설계문서                                    |          |
-|  ⭕️   | ㄴ                                           | API Docs |
-|       | ㄴ                                           | 코드 구조    |
-|  ⭕️   | ㄴ                                           | 서비스 흐름도  |
-|       | ㄴ                                           | 추가 고려 사항 |
-|       | (서버를 구성했다면) 해당 서버 사용 방법                     |          |
-|       | 주요 서비스 흐름에 따른 로깅                            |          |
-|       | 단위 테스트                                      |          |
-|       | 확장 가능한 코드 구성 또는 서버 아키텍처 구성 (간단한 설계문서 제출 필요) |          |
-|       | TODO List 서비스를 사용할 수 있는 간단한 View 생성         |          |
+| 완수 여부 | 내용                                          | 설명                                                                                                           |
+|:-----:|:--------------------------------------------|:-------------------------------------------------------------------------------------------------------------|
+|  ⭕️   | 간단한 설계문서                                    |                                                                                                              |
+|  ⭕️   | ㄴ                                           | [API Docs]                                                                                                   |
+|  ⭕️   | ㄴ                                           | [코드 구조](https://github.com/minsu-j0/todo-management/blob/main/%EC%BD%94%EB%93%9C%20%EA%B5%AC%EC%84%B1.md)    |
+|  ⭕️   | ㄴ                                           | [서비스 흐름도](https://github.com/minsu-j0/todo-management/blob/main/%ED%9D%90%EB%A6%84%EB%8F%84.md)              |
+|  ⭕️   | ㄴ                                           | [추가 고려 사항](https://github.com/minsu-j0/todo-management/blob/main/%EA%B8%B0%EB%8A%A5%20%EB%AA%85%EC%84%B8.md) |
+|   ❌   | (서버를 구성했다면) 해당 서버 사용 방법                     |                                                                                                              |
+|  ⭕️   | 주요 서비스 흐름에 따른 로깅                            | 사용자의 계정 활성화, 비활성화 여부, Todo 항목에 대한 생성 및 변경에 대한 내역을 DB 에 Log Table 을 만들어 저장                                    |
+|  ⭕️   | 단위 테스트                                      | [링크]                                                                                                         |
+|   ❌   | 확장 가능한 코드 구성 또는 서버 아키텍처 구성 (간단한 설계문서 제출 필요) |                                                                                                              |
+|   ❌   | TODO List 서비스를 사용할 수 있는 간단한 View 생성         |                                                                                                              |
 
 
  
+##### 서버 실행 방법
 
-
+1. source code clone 
+2. 접근 할 외부 혹은 로컬 DB 에 'moais_todo_management' schema 생성
+   - charset : utf8mb4
+   - collation : utf8mb4_unicode_ci 
+3. 환경변수 설정 후 Application 실행
+   - Environment Variable(ex) url=localhost:3306;username=root;password=qwe123!@#;salt=moais ) 
+     - url = db 주소 
+     - username = db username
+     - password = user 의 password
+     - salt = password encoding 시 필요한 salt 키 임의 설정
