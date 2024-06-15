@@ -1,7 +1,7 @@
 # Schema
 
 > 
-![DB Schema.png](https://github.com/minsu-j0/todo-management/blob/main/images/DBSchema.png?raw=true)
+![schema.png](https://github.com/minsu-j0/todo-management/blob/main/images/schema.png?raw=true)
 
 ### 설명
 - todo
