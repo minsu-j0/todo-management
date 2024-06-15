@@ -51,3 +51,12 @@
      - username = db username
      - password = user 의 password
      - salt = password encoding 시 필요한 salt 키 임의 설정
+4. 동작 테스트는 아래의 가이드를 따라 스웨거 활용 부탁드리겠습니다.
+   - [LINK](http://localhost:8080/swagger-ui/index.html)
+
+
+## 📋 Swagger 활용 방법
+
+1. 사용자를 생성합니다.
+2. 생성 후 반환받은 access token 을 우측 상단 연두색 'Authorize' 버튼을 클릭해 나온 입력창에 입력 후 인증합니다.
+3. 이 후 API 실행 가능합니다.

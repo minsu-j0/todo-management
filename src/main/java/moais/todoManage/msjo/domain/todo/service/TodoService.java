@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import moais.todoManage.msjo.config.exception.BusinessException;
 import moais.todoManage.msjo.domain.todo.dto.req.TodoCreateReq;
 import moais.todoManage.msjo.domain.todo.repository.TodoRepository;
 import moais.todoManage.msjo.entity.common.enums.TodoStatus;
@@ -12,8 +13,11 @@ import moais.todoManage.msjo.entity.domain.Todo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Objects;
 
 /**
  * packageName    : moais.todoManage.msjo.domain.todo.service
@@ -66,6 +70,10 @@ public class TodoService {
     public Todo changeStatus(Member member, Long seq, TodoStatus todoStatus) {
 
         Todo todo = findById(member, seq);
+
+        if (Objects.isNull(todo)) {
+            throw new BusinessException(HttpStatus.NOT_FOUND, "TODO");
+        }
 
         switch (todoStatus) {
             case TODO -> todo.toTODO();

@@ -71,7 +71,7 @@ public class TodoController {
     @ApiResponses(value ={
         @ApiResponse(responseCode = "200", description = "생성 완료"),
         @ApiResponse(responseCode = "403", description = "만료된 토큰"),
-        @ApiResponse(responseCode = "404", description = "사용자 정보 일치하지 않음"),
+        @ApiResponse(responseCode = "404", description = "message [MEMBER : 사용자 정보 일치하지 않음]"),
     }
     )
     @PostMapping
@@ -95,7 +95,7 @@ public class TodoController {
     @ApiResponses(value ={
         @ApiResponse(responseCode = "200", description = "요청 성공"),
         @ApiResponse(responseCode = "403", description = "만료된 토큰"),
-        @ApiResponse(responseCode = "404", description = "사용자 정보 일치하지 않음"),
+        @ApiResponse(responseCode = "404", description = "message [MEMBER : 사용자 정보 일치하지 않음]"),
     })
     @GetMapping("/lastest")
     public ResponseEntity findLastestTodo(@AuthenticationPrincipal SecurityUserDetails details) {
@@ -114,7 +114,7 @@ public class TodoController {
     @ApiResponses(value ={
         @ApiResponse(responseCode = "200", description = "요청 성공"),
         @ApiResponse(responseCode = "403", description = "만료된 토큰"),
-        @ApiResponse(responseCode = "404", description = "사용자 정보 일치하지 않음"),
+        @ApiResponse(responseCode = "404", description = "message [MEMBER : 사용자 정보 일치하지 않음]"),
     })
     @GetMapping
     public ResponseEntity findTodos(
@@ -140,7 +140,7 @@ public class TodoController {
     @ApiResponses(value ={
         @ApiResponse(responseCode = "200", description = "변경 완료"),
         @ApiResponse(responseCode = "403", description = "만료된 토큰"),
-        @ApiResponse(responseCode = "404", description = "사용자 정보 일치하지 않음"),
+        @ApiResponse(responseCode = "404", description = "message [MEMBER : 사용자 정보 일치하지 않음], [TODO : 해당 TODO 가 존재하지 않음]"),
         @ApiResponse(responseCode = "400", description = "진행중 상태에서만 대기 상태로 변경 가능"),
     })
     @PatchMapping("/{seq}")

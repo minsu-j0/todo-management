@@ -49,7 +49,7 @@ public class TokenService {
         Member member = memberService.findById(id);
 
         if (member == null) {
-            throw new BusinessException(HttpStatus.NOT_FOUND);
+            throw new BusinessException(HttpStatus.NOT_FOUND, "MEMBER");
         }
 
         if (!passwordEncoder.matches(rawPassword, member.getPassword())) {

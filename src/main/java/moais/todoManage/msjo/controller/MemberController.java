@@ -115,7 +115,7 @@ public class MemberController {
     @ApiResponses(value ={
         @ApiResponse(responseCode = "200", description = "변경 완료"),
         @ApiResponse(responseCode = "403", description = "만료된 토큰"),
-        @ApiResponse(responseCode = "404", description = "사용자 정보 일치하지 않음"),
+        @ApiResponse(responseCode = "404", description = "message [MEMBER : 사용자 정보 일치하지 않음]"),
     })
     @PatchMapping("/nickname")
     public ResponseEntity changeNickname(
@@ -135,7 +135,7 @@ public class MemberController {
     @ApiResponses(value ={
         @ApiResponse(responseCode = "200", description = "비활성화 완료"),
         @ApiResponse(responseCode = "403", description = "만료된 토큰"),
-        @ApiResponse(responseCode = "404", description = "사용자 정보 일치하지 않음"),
+        @ApiResponse(responseCode = "404", description = "message [MEMBER : 사용자 정보 일치하지 않음]"),
     })
     @PatchMapping("/inactive")
     public ResponseEntity inactiveMember(

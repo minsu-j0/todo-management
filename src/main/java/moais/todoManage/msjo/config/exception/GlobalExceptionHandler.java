@@ -25,7 +25,7 @@ public class GlobalExceptionHandler {
 
 		log.error("business exception! :: {}", exception.toString());
 
-		return new ResponseEntity<>(exception.getHttpStatus()); // httpStatus
+		return new ResponseEntity<>(exception.toString(), exception.getHttpStatus()); // httpStatus
 	}
 
 	@ResponseBody

@@ -46,7 +46,7 @@ public class SecurityDetailsService implements UserDetailsService {
         Member member = memberService.findBySeq(Long.parseLong(seq));
 
         if(Objects.isNull(member)) {
-            throw new BusinessException(HttpStatus.NOT_FOUND);
+            throw new BusinessException(HttpStatus.NOT_FOUND, "MEMBER");
         }
 
         if(!member.isActive()) {
