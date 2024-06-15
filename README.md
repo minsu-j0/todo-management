@@ -17,7 +17,7 @@
 |:-----:|:---------|:------------------------------------------------------------------------------------|
 |  ⭕️   | 기능 명세 추출 | [이동](https://github.com/minsu-j0/todo-management/blob/main/기능명세.md)                 |
 |  ⭕️   | 스키마 설계   | [이동](https://github.com/minsu-j0/todo-management/blob/main/Schema.md)               |
-|  ⭕️   | 기술스텍 설정  | [이동](https://github.com/minsu-j0/todo-management/blob/main/사용 기술.md)                |
+|  ⭕️   | 기술스텍 설정  | [이동](https://github.com/minsu-j0/todo-management/blob/main/사용%20기술.md)              |
 |  ⭕️   | 아키텍처 구성  | [이동](https://github.com/minsu-j0/todo-management/blob/main/images/Layer%20Flow.png) |
 |  ⭕️   | 기능 개발    | [이동](https://github.com/minsu-j0/todo-management/tree/main/src)                     |
 
