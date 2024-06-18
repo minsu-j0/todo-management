@@ -78,7 +78,7 @@ public class TodoController {
     public ResponseEntity addTODO(@RequestBody TodoCreateReq request,
                                   @AuthenticationPrincipal SecurityUserDetails details) {
 
-        Member member = memberService.findBySeq(details.getSeq());
+        Member member = memberService.findBySeq(details.getSeq()).get();
 
         Todo todo = todoService.createTodo(member, request);
 
@@ -100,7 +100,7 @@ public class TodoController {
     @GetMapping("/lastest")
     public ResponseEntity findLastestTodo(@AuthenticationPrincipal SecurityUserDetails details) {
 
-        Member member = memberService.findBySeq(details.getSeq());
+        Member member = memberService.findBySeq(details.getSeq()).get();
 
         Todo todo = todoService.findLastestTodo(member);
 
@@ -121,7 +121,7 @@ public class TodoController {
             int size, int page,
             @AuthenticationPrincipal SecurityUserDetails details) {
 
-        Member member = memberService.findBySeq(details.getSeq());
+        Member member = memberService.findBySeq(details.getSeq()).get();
 
         log.info("member :: {}", member);
 
@@ -149,7 +149,7 @@ public class TodoController {
             @RequestBody TodoChangeStatusReq request,
             @AuthenticationPrincipal SecurityUserDetails details) {
 
-        Member member = memberService.findBySeq(details.getSeq());
+        Member member = memberService.findBySeq(details.getSeq()).get();
 
         Todo afterTodo = todoService.changeStatus(member, seq, request.getStatus());
         TodoFindRes result = todoMapper.toTodoFindRes(afterTodo);

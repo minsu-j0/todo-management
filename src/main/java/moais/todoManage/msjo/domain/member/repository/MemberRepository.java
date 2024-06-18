@@ -21,9 +21,9 @@ import java.util.Optional;
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
 
-    Member findById(String id);
+    Optional<Member> findById(String id);
 
-    Member findBySeq(Long seq);
+    Optional<Member> findBySeq(Long seq);
 
-    Member findByNickname(String nickname);
+    Optional<Member> findByNickname(String nickname);
 }

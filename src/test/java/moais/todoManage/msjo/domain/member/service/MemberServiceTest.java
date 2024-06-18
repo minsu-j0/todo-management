@@ -100,7 +100,7 @@ class MemberServiceTest {
 
         member.changeNickname(afterNickname);
 
-        Member afterMember = memberService.findById(request.getId());
+        Member afterMember = memberService.findById(request.getId()).get();
 
         //then
         assertEquals(afterNickname, afterMember.getNickname());
@@ -118,7 +118,7 @@ class MemberServiceTest {
 
         memberService.makeInactive(member.getSeq(), new MemberInactiveReq("더이상 활동 못할거같아서요"));
 
-        Member afterMember = memberService.findById(request.getId());
+        Member afterMember = memberService.findById(request.getId()).get();
         boolean afterIsActive = afterMember.isActive();
 
         //then
@@ -140,7 +140,7 @@ class MemberServiceTest {
 
         memberService.makeActive(member.getSeq());
 
-        Member afterMember = memberService.findById(request.getId());
+        Member afterMember = memberService.findById(request.getId()).get();
         boolean afterIsActive = afterMember.isActive();
 
         //then

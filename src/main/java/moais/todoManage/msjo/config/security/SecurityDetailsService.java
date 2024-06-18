@@ -43,11 +43,8 @@ public class SecurityDetailsService implements UserDetailsService {
 
     private SecurityUserInfo getSecurityUserInfo(String seq) {
 
-        Member member = memberService.findBySeq(Long.parseLong(seq));
-
-        if(Objects.isNull(member)) {
-            throw new BusinessException(HttpStatus.NOT_FOUND, "MEMBER");
-        }
+        Member member = memberService.findBySeq(Long.parseLong(seq)).orElseThrow(
+                () -> new BusinessException(HttpStatus.NOT_FOUND, "MEMBER"));
 
         if(!member.isActive()) {
             throw new BusinessException(HttpStatus.FORBIDDEN);

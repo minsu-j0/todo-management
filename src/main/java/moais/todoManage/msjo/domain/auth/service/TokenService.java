@@ -46,11 +46,8 @@ public class TokenService {
 
     public JwtIssueRes issueMemberJwt(String id, String rawPassword) {
 
-        Member member = memberService.findById(id);
-
-        if (member == null) {
-            throw new BusinessException(HttpStatus.NOT_FOUND, "MEMBER");
-        }
+        Member member = memberService.findById(id).orElseThrow(
+                () -> new BusinessException(HttpStatus.NOT_FOUND, "MEMBER"));
 
         if (!passwordEncoder.matches(rawPassword, member.getPassword())) {
             throw new BusinessException(HttpStatus.UNAUTHORIZED);
