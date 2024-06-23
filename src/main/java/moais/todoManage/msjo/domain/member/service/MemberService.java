@@ -59,6 +59,7 @@ public class MemberService {
     }
 
     /**
+     * TODO
      * Optional 로 반환할 지 Entity 로 반환할지
      *  - Optional 로 반환하고 호출한 곳에서 해당 결과에 따른 유동적인 처리
      *      => 타 Member 에 대해 조회할 여지가 있을 시

@@ -122,9 +122,6 @@ public class MemberController {
             @RequestBody MemberModifyNicknameReq request,
             @AuthenticationPrincipal SecurityUserDetails member) {
 
-        log.info("request :: {}", request);
-        log.info("member :: {}", member.getNickname());
-
         Member result = memberService.changeNickname(member.getSeq(), request);
 
         return ResponseEntity.ok(result.getNickname());

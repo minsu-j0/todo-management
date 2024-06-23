@@ -33,7 +33,6 @@ public class JwtUtil {
 
     private String JWT_SECRET = "VlwEyVBsYt9V7zq57TejMnVUyzblYcfPQye08f7MGVA9XkHa";
 
-    // TODO key 값 간소하게 설정하는 것으로 수정(알고리즘 변경)
     public JwtUtil() {
 
         byte[] keyBytes = Decoders.BASE64.decode(JWT_SECRET);

@@ -11,4 +11,4 @@
 - member
   - 사용자 정보를 저장하는 Table
 - member_active_history
-  - 사용자 (비)활성화 내역을 저장하는 Table
+  - 사용자 (비)활성화 내역을 저장하는 Table[Schema.md](Schema.md)
